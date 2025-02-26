@@ -23,14 +23,16 @@
 # single tau-tagging
 - name: hadtaujets
   label: $\tau$-jets
-  cuts: ["HadronConeExclTruthLabelID == 15", "IsHadronicTauFromTruthTaus == 1", "numChargedFromTruthTaus > 0"]
+  cuts: ["HadronConeExclTruthLabelID == 15", "IsHadronicTauFromTruthTaus == 1", "numChargedFromTruthTaus > 0", "eta_visFromTruthTaus > -2.5", "eta_visFromTruthTaus < 2.5"]
   colour: tab:blue
   category: single-tautag
+  _px: pTau
 - name: qcdjets
   label: qcd-jets
   cuts: ["HadronConeExclTruthLabelID <= 5"]
   colour: tab:orange
   category: single-tautag
+  _px: pJet
 
 # extended single b-tagging
 - name: singlebjets
